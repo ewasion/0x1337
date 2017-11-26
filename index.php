@@ -15,7 +15,7 @@
 		}
 	}
 
-	if ($gPASSW == $tPASS) {
+	if (strcmp($gPASSW, $tPASS) !== 0) {
 		if($_FILES['img']['name']) {
 			if(!$_FILES['img']['error']) {
 				if($_FILES['img']['size'] < (4096000)) { // Also check php.ini for file_uploads and upload_max_filesize
